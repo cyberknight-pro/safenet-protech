@@ -1,0 +1,85 @@
+/* Settings Page Container */
+.settings-container {
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    background: #242424;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+  }
+  
+  .settings-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .settings-section {
+    margin-bottom: 20px;
+  }
+  
+  .settings-section h3 {
+    margin-bottom: 10px;
+  }
+  
+  .settings-section label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .settings-section input {
+    width: 60%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  /* Save Button */
+  .save-btn {
+    background: #33334d;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+  }
+  
+  .save-btn:hover {
+    background: #55557a;
+  }
+  
+  /* Dark Mode Toggle */
+  .switch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .switch input {
+    display: none;
+  }
+  
+  .slider {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    background: #ccc;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .switch input:checked + .slider {
+    background: #007bff;
+  }
+  
+  .dark-mode {
+    background: #121212;
+    color: white;
+  }
+  

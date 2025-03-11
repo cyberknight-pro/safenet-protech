@@ -1,0 +1,68 @@
+/* Dashboard Container */
+.dashboard {
+    margin-top: 20px;
+    padding: 20px;
+  }
+  
+  /* Stats Section */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+  
+  .stat-card {
+    background: #242424; /* Dark theme */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .stat-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .stat-card p {
+    font-size: 16px;
+  }
+  
+  /* Quick Actions */
+  .quick-actions {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .quick-btn {
+    background: #33334d; /* Dark button */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .quick-btn:hover {
+    background: #55557a;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .stats {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+  
+    .quick-actions {
+      flex-direction: column;
+    }
+  }
+  

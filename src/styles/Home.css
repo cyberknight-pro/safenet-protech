@@ -1,0 +1,130 @@
+/* Home.css - Professional Cybersecurity Theme */
+
+body {
+    background-color: #0D1117; /* Dark background for a cybersecurity feel */
+    color: #E6EDF3; /* Light text for readability */
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Top Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #0D1117;
+    z-index: 1000;
+}
+
+/* Website Name */
+.site-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #58A6FF;
+}
+
+/* Home Content */
+.home-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #58A6FF; /* Highlighted text */
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+    color: #C9D1D9;
+    margin: 20px 0;
+}
+
+button {
+    background-color: #238636; /* Secure green theme */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background-color: #2EA043;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVENESS */
+
+/* For tablets (768px and below) */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px;
+    }
+    .site-name {
+        font-size: 1.3rem;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    button {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+}
+
+/* For mobile devices (480px and below) */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+    .site-name {
+        font-size: 1.2rem;
+    }
+    .home-container {
+        max-width: 90%;
+        padding: 15px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 0.9rem;
+    }
+    button {
+        width: 100%;
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
