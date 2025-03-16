@@ -1,7 +1,7 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import HomeLoggedIn from "./pages/HomeLoggedIn"; // Import the new file
+import HomeLoggedIn from "./pages/HomeLoggedIn";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Subscription from "./pages/Subscription";
@@ -11,17 +11,15 @@ import HaramFilter from "./pages/HaramFilter";
 import PasswordManager from "./pages/PasswordManager";
 import Dashboard from "./pages/Dashboard";
 import Settings from "./pages/Settings";
-import Profile from "./pages/Profile"; // Import Profile page
-
-<Route path="/profile" element={<Profile />} />
-
+import Profile from "./pages/Profile";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
-  // Simulated authentication check
-  const isLoggedIn = true; // Change to true to test the logged-in page
+  const isLoggedIn = true; // simulate auth
 
   return (
-    <Router>
+    <>
       <Routes>
         <Route path="/" element={isLoggedIn ? <HomeLoggedIn /> : <Home />} />
         <Route path="/login" element={<Login />} />
@@ -35,7 +33,10 @@ const App = () => {
         <Route path="/password-manager" element={<PasswordManager />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
-    </Router>
+
+      {/* Toast container placed outside Routes */}
+      <ToastContainer position="top-right" autoClose={3000} />
+    </>
   );
 };
 

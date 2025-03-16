@@ -1,26 +1,43 @@
 import React, { useState } from "react";
+import Navbar from "../components/Navbar";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "../styles/HaramFilter.css";
 
 const HaramFilter = () => {
-  const [enabled, setEnabled] = useState(true);
-  const [customWords, setCustomWords] = useState("");
+  const [settings, setSettings] = useState({
+    filterLevel: "moderate",
+  });
+
+  const handleSave = (e) => {
+    e.preventDefault();
+    toast.success("Filter settings saved successfully!");
+  };
 
   return (
-    <div className="haram-filter-container">
-      <h2>AI Haram Filter</h2>
-      <label className="switch">
-        <span>Enable Filter</span>
-        <input type="checkbox" checked={enabled} onChange={() => setEnabled(!enabled)} />
-        <span className="slider"></span>
-      </label>
-
-      <textarea 
-        placeholder="Add custom banned words (comma-separated)" 
-        value={customWords} 
-        onChange={(e) => setCustomWords(e.target.value)}
-      />
-      <button className="save-btn">Save</button>
-    </div>
+    <>
+      <Navbar />
+      <div className="haram-filter-container">
+        <h2>AI Haram Filter Settings</h2>
+        <form onSubmit={handleSave}>
+          <label>
+            Filter Level:
+            <select
+              value={settings.filterLevel}
+              onChange={(e) =>
+                setSettings({ ...settings, filterLevel: e.target.value })
+              }
+            >
+              <option value="strict">Strict</option>
+              <option value="moderate">Moderate</option>
+              <option value="custom">Custom</option>
+            </select>
+          </label>
+          <button type="submit">Save Settings</button>
+        </form>
+      </div>
+      <ToastContainer position="top-right" autoClose={3000} />
+    </>
   );
 };
 

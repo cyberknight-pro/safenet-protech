@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 import zxcvbn from "zxcvbn"; // Password strength library
 import "../styles/PasswordChecker.css";
 
