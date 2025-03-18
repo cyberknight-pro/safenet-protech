@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/safenet-protech/static/css/main.ecdb525d.css",
+    "main.js": "/safenet-protech/static/js/main.bda6bed8.js",
+    "index.html": "/safenet-protech/index.html",
+    "main.ecdb525d.css.map": "/safenet-protech/static/css/main.ecdb525d.css.map",
+    "main.bda6bed8.js.map": "/safenet-protech/static/js/main.bda6bed8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ecdb525d.css",
+    "static/js/main.bda6bed8.js"
+  ]
+}
