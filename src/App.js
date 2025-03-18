@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import Home from "./pages/Home";
 import HomeLoggedIn from "./pages/HomeLoggedIn";
 import Login from "./pages/Login";
@@ -16,10 +16,38 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
-  const isLoggedIn = false; // simulate auth
+  const navigate = useNavigate();
+
+  const isLoggedIn = !!localStorage.getItem('token'); // Check if token exists
+
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    navigate('/login');
+  };
 
   return (
     <>
+      {/* Example logout button (you can move this to Navbar or Dashboard) */}
+      {isLoggedIn && (
+        <button
+          onClick={handleLogout}
+          style={{
+            position: "fixed",
+            top: "20px",
+            right: "20px",
+            padding: "8px 16px",
+            background: "red",
+            color: "white",
+            border: "none",
+            borderRadius: "4px",
+            cursor: "pointer",
+            zIndex: 999
+          }}
+        >
+          Logout
+        </button>
+      )}
+
       <Routes>
         <Route path="/" element={isLoggedIn ? <HomeLoggedIn /> : <Home />} />
         <Route path="/login" element={<Login />} />
@@ -34,7 +62,6 @@ const App = () => {
         <Route path="/profile" element={<Profile />} />
       </Routes>
 
-      {/* Toast container placed outside Routes */}
       <ToastContainer position="top-right" autoClose={3000} />
     </>
   );
