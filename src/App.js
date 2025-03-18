@@ -16,7 +16,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
-  const isLoggedIn = true; // simulate auth
+  const isLoggedIn = false; // simulate auth
 
   return (
     <>
