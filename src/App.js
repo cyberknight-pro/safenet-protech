@@ -25,6 +25,8 @@ const App = () => {
     navigate('/login');
   };
 
+
+
   return (
     <>
       {/* Example logout button (you can move this to Navbar or Dashboard) */}
